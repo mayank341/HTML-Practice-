@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign in </title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="brand">
+        <div class="logo">A</div>
+        <h1>Welcome back</h1>
+        <p class="muted">Sign in to continue</p>
+      </div>
+
+      <form class="form" action="#" method="post" onsubmit="event.preventDefault(); alert('Signed in (mock)');">
+        <label class="field">
+          <span class="label-text">Email</span>
+          <input type="email" name="email" placeholder="you@domain.com" required />
+        </label>
+
+        <label class="field">
+          <span class="label-text">Password</span>
+          <div class="password-row">
+            <input id="pwd" type="password" name="password" placeholder="Enter your password" required />
+            <button type="button" class="eye" aria-label="toggle password" onclick="togglePwd()">
+              👁
+            </button>
+          </div>
+        </label>
+
+        <label class="row">
+          <input type="checkbox" name="remember" />
+          <span class="muted">Remember me</span>
+          <a class="forgot" href="#">Forgot?</a>
+        </label>
+
+        <button class="btn primary" type="submit">Sign in</button>
+      </form>
+
+      <p class="or">Or connect with</p>
+
+      <div class="socials" role="navigation" aria-label="social login">
+        <a class="social" href="https://twitter.com/login" target="_blank" rel="noopener noreferrer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter-logo.svg" alt="Twitter" />
+        </a>
+
+        <a class="social" href="https://www.facebook.com/login" target="_blank" rel="noopener noreferrer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />
+        </a>
+
+        <a class="social" href="https://www.instagram.com/accounts/login" target="_blank" rel="noopener noreferrer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" />
+        </a>
+      </div>
+
+      <p class="signup">
+        Don't have an account? <a href="signup.html">Sign up</a>
+      </p>
+    </section>
+  </main>
+
+  <script>
+    function togglePwd() {
+      const p = document.getElementById('pwd');
+      p.type = p.type === 'password' ? 'text' : 'password';
+    }
+  </script>
+</body>
+</html>
